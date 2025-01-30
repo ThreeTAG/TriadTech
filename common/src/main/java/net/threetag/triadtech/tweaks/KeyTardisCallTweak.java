@@ -50,7 +50,7 @@ public class KeyTardisCallTweak {
                     TardisLevelOperator operator = operatorOptional.get();
                     TardisPilotingManager pilotManager = operator.getPilotingManager();
 
-                    if (pilotManager.beginFlight(true, null) && !pilotManager.isInRecovery()) {
+                    if (pilotManager.beginFlight(true) && !pilotManager.isInRecovery()) {
                         pilotManager.setTargetLocation(new TardisNavLocation(pos.above(), player.getDirection().getOpposite(), serverLevel));
                         level.playSound(null, pos, SoundEvents.PLAYER_LEVELUP, SoundSource.BLOCKS, 1.0F, 1.0F);
                         PlayerUtil.sendMessage(player, Component.translatable(ModMessages.TARDIS_IS_ON_THE_WAY), true);

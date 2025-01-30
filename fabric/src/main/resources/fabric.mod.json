@@ -5,7 +5,7 @@
   "name": "TriadTech",
   "description": "An addon for TARDIS Refined, adding new upgrade for the TARDIS!",
   "authors": [
-    "Lucraft"
+    "Lucraft", "Jeryn99", "Sheriff1999"
   ],
   "contact": {
     "homepage": "https://modrinth.com/project/triadtech",
@@ -29,6 +29,6 @@
     "minecraft": "~1.20.1",
     "java": ">=17",
     "fabric-api": "*",
-    "tardis_refined": ">=2.0.2"
+    "tardis_refined": ">=2.1.3"
   }
 }
