@@ -23,7 +23,7 @@ public class TriadTechEventHandler {
 
     @SubscribeEvent
     public static void rightClickBlock(PlayerInteractEvent.RightClickBlock e) {
-        if (e.getLevel().getBlockState(e.getPos()).getBlock() != TRBlockRegistry.GLOBAL_SHELL_BLOCK.get()) {
+        if (e.getLevel().getBlockState(e.getPos()).getBlock() != TRBlockRegistry.GLOBAL_SHELL_BLOCK.get() && e.getLevel().getBlockState(e.getPos()).getBlock() != TRBlockRegistry.LANDING_PAD.get()) {
             var result = KeyTardisCallTweak.rightClick(e.getEntity(), e.getLevel(), e.getHand(), e.getPos().above());
 
             if (result.getResult() != InteractionResult.PASS) {

@@ -22,7 +22,6 @@ import whocraft.tardis_refined.common.util.DimensionUtil;
 import whocraft.tardis_refined.common.util.Platform;
 import whocraft.tardis_refined.common.util.PlayerUtil;
 import whocraft.tardis_refined.constants.ModMessages;
-import whocraft.tardis_refined.registry.TRBlockRegistry;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -43,7 +42,7 @@ public class KeyTardisCallTweak {
                     ServerLevel tardisLevel = Platform.getServer().getLevel(dimension);
                     Optional<TardisLevelOperator> operatorOptional = TardisLevelOperator.get(tardisLevel);
 
-                    if (level.getBlockState(pos).is(TRBlockRegistry.LANDING_PAD.get()) || operatorOptional.isEmpty() || !operatorOptional.get().getUpgradeHandler().isUpgradeUnlocked(TTUpgrades.EMERGENCY_EXIT.get())) {
+                    if (operatorOptional.isEmpty() || !operatorOptional.get().getUpgradeHandler().isUpgradeUnlocked(TTUpgrades.EMERGENCY_EXIT.get())) {
                         return InteractionResultHolder.pass(stack);
                     }
 

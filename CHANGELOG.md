@@ -1,1 +1,2 @@
 - Bug fix: Key crashing the game when summoning the TARDIS
+- Bug fix: Key breaking when used on landing pad

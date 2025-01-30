@@ -16,7 +16,7 @@ public final class TriadTechFabric implements ModInitializer {
 
         UseItemCallback.EVENT.register((player, level, hand) -> KeyTardisCallTweak.rightClick(player, level, hand, null));
         UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> {
-            if (level.getBlockState(hitResult.getBlockPos()).getBlock() != TRBlockRegistry.GLOBAL_SHELL_BLOCK.get()) {
+            if (level.getBlockState(hitResult.getBlockPos()).getBlock() != TRBlockRegistry.GLOBAL_SHELL_BLOCK.get() && level.getBlockState(hitResult.getBlockPos()).getBlock() != TRBlockRegistry.LANDING_PAD.get()) {
                 return KeyTardisCallTweak.rightClick(player, level, hand, hitResult.getBlockPos().above()).getResult();
             }
             return InteractionResult.PASS;
